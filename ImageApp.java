@@ -21,14 +21,14 @@ public class ImageApp
     Picture recoloredImg = new Picture(pictureFile);
     Pixel[][] recoloredPixels = recoloredImg.getPixels2D();
 
-    for (Pixel[] row : recoloredPixels)
+    for (Pixel[] row : recoloredPixels) //goes through each row
     {
-      for (Pixel pixel : row)
+      for (Pixel pixel : row) //goes through each pixel in the row
       {
-        pixel.setColor(new Color(pixel.getBlue(), pixel.getRed(), pixel.getGreen()));
+        pixel.setColor(new Color(pixel.getBlue(), pixel.getRed(), pixel.getGreen())); //recolors the pixel by changing the RGB color of each pixel
       }
     }
-    recoloredImg.explore();
+    recoloredImg.explore(); //displays the recolored image
 
     // Image #2 Using the original image and pixels, create a photographic negative of the image
     Picture negImg = new Picture(pictureFile);
