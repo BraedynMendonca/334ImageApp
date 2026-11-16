@@ -34,7 +34,14 @@ public class ImageApp
     Picture negImg = new Picture(pictureFile);
     Pixel[][] negPixels = negImg.getPixels2D();
 
-    /* to be implemented */
+    for (Pixel[] row : negPixels)
+    {
+      for (Pixel pixel : row)
+      {
+        pixel.setColor(new Color(255 - pixel.getRed(), 255 - pixel.getGreen(), 255 - pixel.getBlue()));
+      }
+    }
+    negImg.explore();
 
     // Image #3 Using the original image and pixels, create a grayscale version of the image
     Picture grayscaleImg = new Picture(pictureFile);
